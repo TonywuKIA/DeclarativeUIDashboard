@@ -26,19 +26,19 @@ fun DashboardScreen(modifier: Modifier = Modifier) {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
-        // Required: Text displaying a title
+        // Text displaying a title
         Text(
             text = "Simple Dashboard",
             style = MaterialTheme.typography.headlineMedium
         )
 
-        // Required: Column/Row layout (here: Row)
+        // Column/Row layout (here: Row)
         Row(
             modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            // Required: Button or Switch that changes state
+            // Button or Switch that changes state
             DashboardToggle(
                 isOn = isTracking,
                 onToggle = { isTracking = it } // lambda callback -> parent updates state
@@ -53,7 +53,7 @@ fun DashboardScreen(modifier: Modifier = Modifier) {
             )
         }
 
-        // Required: Dynamic text that updates automatically when state changes
+        // Dynamic text that updates automatically when state changes
         StatusCard(
             status = statusText,
             counter = counter,
